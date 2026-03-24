@@ -21,7 +21,6 @@ export interface GiphyGif {
   source_post_url: string
   is_sticker: number
   import_datetime: Date
-  trending_datetime: TrendingDatetime
   images: Images
   user?: User
   analytics_response_payload: string
@@ -63,17 +62,9 @@ export interface FixedHeight {
   hash?: string
 }
 
-export enum Rating {
-  G = 'g',
-}
+export type Rating = 'g' | 'PG'
 
-export enum TrendingDatetime {
-  The00000000000000 = '0000-00-00 00:00:00',
-}
-
-export enum Type {
-  GIF = 'gif',
-}
+export type Type = 'gif' | 'stickers'
 
 export interface User {
   avatar_url: string
